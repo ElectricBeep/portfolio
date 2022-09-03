@@ -1,0 +1,157 @@
+.contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contactBg {
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(101, 179, 98, 1) 0%, rgba(43, 121, 41, 1) 100%);
+    position: absolute;
+    left: 0;
+}
+
+.contactWrapper {
+    padding: 50px;
+    display: flex;
+}
+
+.contactLeft {
+    flex: 1;
+}
+
+.contactTitle {
+    font-size: 64px;
+    width: 70%;
+}
+
+.contactInfoItem {
+    display: flex;
+    align-items: center;
+    margin: 50px 0px;
+    font-weight: 300;
+    font-size: 20px;
+    width: 70%;
+}
+
+.contactIcon {
+    margin-right: 30px;
+    color: inherit;
+}
+
+.socialIcon:hover {
+    color: #59b256;
+}
+
+.contactRight {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactDesc {
+    font-weight: 300;
+    width: 100%;
+    font-size: 18px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    width: 50%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 10px 0px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+input:hover {
+    border-bottom: 1px solid black;
+}
+
+textarea {
+    width: 100%;
+    margin: 10px 0px;
+    font-size: 14px;
+    padding-left: 10px;
+    border: 1px solid gray;
+}
+
+textarea:hover {
+    border: 1px solid black;
+}
+
+button {
+    z-index: 111;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: #59b256;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #69bb66;
+}
+
+.doneText {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.contactFooter {
+    background-color: #69bb66;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+    .contactWrapper {
+        flex-direction: column;
+        padding: 0px 50px;
+    }
+
+    .contactTitle {
+        font-size: 30px;
+    }
+
+    .contactInfoItem {
+        font-size: 14px;
+        margin: 20px 0px;
+        width: 100%;
+    }
+
+    .contactDesc {
+        display: none;
+    }
+
+    form {
+        margin-top: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    input {
+        width: 35%;
+        height: 40px;
+        margin: 10px;
+        margin-left: 0;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+}

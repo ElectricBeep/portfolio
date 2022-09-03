@@ -1,0 +1,57 @@
+.toggle {
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    border: 1px solid #999;
+    position: fixed;
+    top: 10px;
+    right: 50px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.toggleIcon {
+    width: 15px;
+    height: 15px;
+}
+
+.toggleButton {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #59b256;
+    position: absolute;
+    cursor: pointer;
+}
+
+.toggleButton:hover {
+    background-color: #7eb97c;
+}
+
+.toggleLanguage {
+    width: 50px;
+    height: 25px;
+    border-radius: 20px;
+    border: 1px solid #999;
+    position: fixed;
+    top: 10px;
+    right: 150px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 480px) {
+    .toggle {
+        top: 10px;
+        left: 10px;
+    }
+
+    .toggleLanguage {
+        top: 10px;
+        left: 100px;
+    }
+}

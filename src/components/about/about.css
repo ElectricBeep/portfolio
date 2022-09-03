@@ -1,0 +1,105 @@
+.about {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.aboutLeft {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.aboutCard {
+    width: 60%;
+    height: 70vh;
+    border-radius: 20px;
+}
+
+.aboutImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.aboutRight {
+    flex: 1;
+    font-size: 18px;
+}
+
+.aboutTitle {
+    font-weight: 400;
+    font-weight: bold;
+}
+
+.aboutSub {
+    margin: 20px 0px;
+}
+
+.aboutDesc {
+    width: 80%;
+    font-weight: 300;
+}
+
+.aboutBottomSection {
+    margin: 20px 0;
+}
+
+.aboutAward {
+    margin-top: 50px;
+}
+
+.aboutBottomSection {
+    width: 70%;
+}
+
+.aboutSvg {
+    position: absolute;
+    top: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 50px;
+        padding: 0;
+        height: max-content;
+    }
+
+    .aboutImg {
+        height: 100%;
+    }
+
+    .aboutLeft {
+        width: 100%;
+    }
+
+    .aboutCard {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .aboutRight {
+        padding: 20px;
+    }
+
+    .aboutDesc {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .aboutBottomSection {
+        margin-top: 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

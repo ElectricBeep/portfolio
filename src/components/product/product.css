@@ -1,0 +1,185 @@
+.p {
+    width: 30%;
+    height: 40vh;
+    margin: 20px 10px;
+    border: 2px solid rgb(190, 190, 190);
+    border-radius: 10px 10px 0px 0px;
+    overflow: hidden;
+    box-shadow: -1px 3px 7px -3px rgba(85, 85, 85, 0.75);
+    -webkit-box-shadow: 0px 0px 20px -12px rgba(125, 85, 85, 0.75);
+    box-shadow: 0px 0px 20px -8px rgba(85, 85, 85, 0.75);
+}
+
+.pImg {
+    width: 100%;
+    transition: all 10s ease;
+}
+
+.pAnimation:hover .pImg {
+    transform: translateY(-50%);
+}
+
+.pProjectName {
+    height: 35px;
+    background-color: #59b256;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    z-index: 2;
+    border-bottom: 2px solid rgb(190, 190, 190);
+}
+
+.pProjectNameText {
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.pProjectIcons {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pProjectInfoContainer {
+    position: absolute;
+    width: 500px;
+    font-size: 13px;
+    right: 5px;
+    top: 35px;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.pProjectInfoTexts {
+    padding: 10px;
+    text-align: start;
+}
+
+.pProjectIcon {
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.pIcon {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.pProjectIcon:hover {
+    color: white;
+}
+
+.pProjectIconsHoverMenu:hover .pProjectInfoContainer {
+    visibility: visible;
+}
+
+.toolsContainer {
+    height: 27px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    position: sticky;
+    bottom: -1px;
+    z-index: 2;
+    border-top: 1px solid rgb(190, 190, 190);
+    color: black;
+}
+
+.toolsContent {
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+}
+
+.toolsContentIcons {
+    display: flex;
+    margin-left: 30px;
+    gap: 50px;
+}
+
+.toolIconReact {
+    font-size: 25px;
+    color: #61dbfb;
+}
+
+.toolIconNext {
+    font-size: 25px;
+    color: black;
+}
+
+.toolIconMongo {
+    font-size: 25px;
+    color: #68a063;
+}
+
+.toolIconExpress {
+    font-size: 25px;
+    color: black;
+}
+
+.toolIconNode {
+    font-size: 25px;
+    color: #68a063;
+}
+
+@media screen and (max-width: 480px) {
+    .p {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 35vh;
+    }
+
+    .pProjectIconsHoverMenu {
+        visibility: hidden;
+    }
+
+    .toolsContent {
+        padding: 20;
+    }
+
+    .toolsContentIcons {
+        margin-left: 20;
+        gap: 10px;
+    }
+
+    .toolsContentText {
+        display: none;
+    }
+
+    .toolsContentIcons {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .p {
+        height: 52vh;
+    }
+
+    .pProjectInfoContainer {
+        width: 385px;
+        font-size: 12px;
+    }
+
+    .pProjectInfoTexts {
+        padding: 2px;
+    }
+
+    .toolsContentText {
+        display: none;
+    }
+
+    .toolsContentIcons {
+        margin-left: 0;
+    }
+}
