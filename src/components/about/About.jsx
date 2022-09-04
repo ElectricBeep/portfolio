@@ -4,7 +4,7 @@ import { LanguageContext } from "../../languageContext";
 import { useContext } from "react";
 import { ThemeContext } from "../../darkThemeContext";
 import Blob from "../../img/blob.svg";
-import Zoom from 'react-reveal/Zoom';
+import Fade from "react-reveal/Fade";
 
 const About = () => {
     const theme = useContext(ThemeContext);
@@ -16,12 +16,13 @@ const About = () => {
     return (
         <div id="about" className="about">
             <div className="aboutLeft">
-                <div className="aboutCard" style={{ backgroundColor: darkMode && "#4e524f" }}>
-                    <img src={Tools} alt="" className="aboutImg" />
-                </div>
+                <Fade left>
+                    <div className="aboutCard" style={{ backgroundColor: darkMode && "#4e524f" }}>
+                        <img src={Tools} alt="" className="aboutImg" />
+                    </div>
+                </Fade>
             </div>
-            <Zoom>
-
+            <Fade right cascade>
                 <div className="aboutRight">
                     <h1 className="aboutTitle">
                         {bosnian ? ("O Meni") : ("About Me")}
@@ -72,7 +73,7 @@ const About = () => {
                     </div>
                     <div className="aboutBg"></div>
                 </div>
-            </Zoom>
+            </Fade>
             <img src={Blob} alt="" className="aboutSvg" />
         </div>
     )

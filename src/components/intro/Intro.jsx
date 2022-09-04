@@ -5,7 +5,7 @@ import 'animate.css';
 import { useContext } from "react";
 import { ThemeContext } from "../../darkThemeContext";
 import { LanguageContext } from "../../languageContext";
-import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 const Intro = () => {
     const theme = useContext(ThemeContext);
@@ -37,29 +37,31 @@ const Intro = () => {
                             &lt;body&gt;
                         </span>
                     </span>
-                    {bosnian ? (
-                        <h2 className="introIntro"><b>Pozdrav</b>, Moje ime je</h2>
-                    ) : (
-                        <h2 className="introIntro"><b>Hello</b>, My name is</h2>
-                    )}
-                    <h1 className="introName">Adnan Smajić</h1>
-                    <div className="introTitle">
-                        <div className="introTitleWrapper">
-                            <div className="introTitleItem">Front-end</div>
-                            <div className="introTitleItem">Back-end</div>
-                            <div className="introTitleItem">Web Developer</div>
-                            <div className="introTitleItem">UI/UX Designer</div>
+                    <Fade left>
+                        {bosnian ? (
+                            <h2 className="introIntro"><b>Pozdrav</b>, Moje ime je</h2>
+                        ) : (
+                            <h2 className="introIntro"><b>Hello</b>, My name is</h2>
+                        )}
+                        <h1 className="introName">Adnan Smajić</h1>
+                        <div className="introTitle">
+                            <div className="introTitleWrapper">
+                                <div className="introTitleItem">Front-end</div>
+                                <div className="introTitleItem">Back-end</div>
+                                <div className="introTitleItem">Web Developer</div>
+                                <div className="introTitleItem">UI/UX Designer</div>
+                            </div>
                         </div>
-                    </div>
-                    {bosnian ? (
-                        <p className="introDesc">
-                            <b>Dobrodošli</b> u moj online portfolio!
-                        </p>
-                    ) : (
-                        <p className="introDesc">
-                            <b>Welcome</b> to my online portfolio!
-                        </p>
-                    )}
+                        {bosnian ? (
+                            <p className="introDesc">
+                                <b>Dobrodošli</b> u moj online portfolio!
+                            </p>
+                        ) : (
+                            <p className="introDesc">
+                                <b>Welcome</b> to my online portfolio!
+                            </p>
+                        )}
+                    </Fade>
                     <span className="tagsBot">
                         <span
                             className="tags botTag"
@@ -84,11 +86,11 @@ const Intro = () => {
             </div>
             <div className="introRight">
                 <div className="introBg"></div>
-                <Zoom>
+                <Fade right>
                     <img src={Guy} alt="" className="introImg" />
-                </Zoom>
+                </Fade>
             </div>
-        </div>
+        </div >
     )
 }
 

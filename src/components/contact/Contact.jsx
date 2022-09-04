@@ -9,6 +9,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { LanguageContext } from "../../languageContext";
+import Fade from "react-reveal/Fade";
 
 const Contact = () => {
     const formRef = useRef();
@@ -45,103 +46,107 @@ const Contact = () => {
                 <div className="contactBg"></div>
                 <div className="contactWrapper">
                     <div className="contactLeft">
-                        {bosnian ? (
-                            <h1 className="contactTitle">Ovako me možete kontaktirati!</h1>
-                        ) : (
-                            <h1 className="contactTitle">Feel free to contact me!</h1>
-                        )}
-                        <div className="contactInfo">
-                            <div className="contactInfoItem">
-                                <LocalPhoneIcon fontSize="large" className="contactIcon" />
-                                +387 62 196 104
+                        <Fade left cascade>
+                            {bosnian ? (
+                                <h1 className="contactTitle">Ovako me možete kontaktirati!</h1>
+                            ) : (
+                                <h1 className="contactTitle">Feel free to contact me!</h1>
+                            )}
+                            <div className="contactInfo">
+                                <div className="contactInfoItem">
+                                    <LocalPhoneIcon fontSize="large" className="contactIcon" />
+                                    +387 62 196 104
+                                </div>
+                                <div className="contactInfoItem">
+                                    <EmailIcon fontSize="large" className="contactIcon" />
+                                    adnan.smajic4431@hotmail.com
+                                </div>
+                                <div className="contactInfoItem">
+                                    <LocationOnIcon fontSize="large" className="contactIcon" />
+                                    Topal Osman-paše Sarajevo 71000
+                                </div>
                             </div>
-                            <div className="contactInfoItem">
-                                <EmailIcon fontSize="large" className="contactIcon" />
-                                adnan.smajic4431@hotmail.com
+                            <div className="contactIconsContainer">
+                                <a className="contactIcon" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+                                    <LinkedInIcon fontSize="large" className="socialIcon" />
+                                </a>
+                                <a className="contactIcon" href="https://github.com/" target="_blank" rel="noreferrer">
+                                    <GitHubIcon fontSize="large" className="socialIcon" />
+                                </a>
+                                <a className="contactIcon" href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+                                    <FacebookIcon fontSize="large" className="socialIcon" />
+                                </a>
                             </div>
-                            <div className="contactInfoItem">
-                                <LocationOnIcon fontSize="large" className="contactIcon" />
-                                Topal Osman-paše Sarajevo 71000
-                            </div>
-                        </div>
-                        <div className="contactIconsContainer">
-                            <a className="contactIcon" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-                                <LinkedInIcon fontSize="large" className="socialIcon" />
-                            </a>
-                            <a className="contactIcon" href="https://github.com/" target="_blank" rel="noreferrer">
-                                <GitHubIcon fontSize="large" className="socialIcon" />
-                            </a>
-                            <a className="contactIcon" href="https://www.facebook.com/" target="_blank" rel="noreferrer">
-                                <FacebookIcon fontSize="large" className="socialIcon" />
-                            </a>
-                        </div>
+                        </Fade>
                     </div>
                     <div className="contactRight">
-                        {bosnian ? (
-                            <p className="contactDesc">
-                                <b>Želite me kontaktirati?</b> Ispunite obrazac ispod i odgovorit
-                                ću što prije.
-                            </p>
-                        ) : (
-                            <p className="contactDesc">
-                                <b>Want to contact me?</b> Fill the form below and I will reply
-                                as soon as I can.
-                            </p>
-                        )}
-                        <form ref={formRef} onSubmit={handleSubmit}>
-                            <input
-                                style={{
-                                    backgroundColor: darkMode ? "#333" : "white",
-                                    color: darkMode ? "white" : "black"
-                                }}
-                                type="text"
-                                placeholder={bosnian ? "Vaše Ime" : "Your Name"}
-                                name="user_name"
-                            />
-                            <input
-                                style={{
-                                    backgroundColor: darkMode ? "#333" : "white",
-                                    color: darkMode ? "white" : "black"
-                                }}
-                                type="text"
-                                placeholder={bosnian ? "Naslov" : "Subject"}
-                                name="user_subject"
-                            />
-                            <input
-                                style={{
-                                    backgroundColor: darkMode ? "#333" : "white",
-                                    color: darkMode ? "white" : "black"
-                                }}
-                                type="text"
-                                placeholder={bosnian ? "Vaša Email Adresa" : "Your Email Address"}
-                                name="user_email"
-                            />
-                            <textarea
-                                style={{
-                                    backgroundColor: darkMode ? "#333" : "white",
-                                    color: darkMode ? "white" : "black"
-                                }}
-                                rows="5"
-                                placeholder={bosnian ? "Poruka" : "Message"}
-                                name="message"
-                            />
-                            <button>
-                                {startSending
-                                    ? (bosnian ? "Šaljem..." : "Sending...")
-                                    : (bosnian ? "Pošalji" : "Submit")
-                                }
-                            </button>
-                            {done && (
-                                (bosnian
-                                    ? (<div className="doneText">
-                                        <b>Hvala vam,</b> pisat ću nazad ubrzo!
-                                    </div>)
-                                    : (<div className="doneText">
-                                        <b>Thank you,</b> I'll write back soon!
-                                    </div>)
-                                )
+                        <Fade right cascade>
+                            {bosnian ? (
+                                <p className="contactDesc">
+                                    <b>Želite me kontaktirati?</b> Ispunite obrazac ispod i odgovorit
+                                    ću što prije.
+                                </p>
+                            ) : (
+                                <p className="contactDesc">
+                                    <b>Want to contact me?</b> Fill the form below and I will reply
+                                    as soon as I can.
+                                </p>
                             )}
-                        </form>
+                            <form ref={formRef} onSubmit={handleSubmit}>
+                                <input
+                                    style={{
+                                        backgroundColor: darkMode ? "#333" : "white",
+                                        color: darkMode ? "white" : "black"
+                                    }}
+                                    type="text"
+                                    placeholder={bosnian ? "Vaše Ime" : "Your Name"}
+                                    name="user_name"
+                                />
+                                <input
+                                    style={{
+                                        backgroundColor: darkMode ? "#333" : "white",
+                                        color: darkMode ? "white" : "black"
+                                    }}
+                                    type="text"
+                                    placeholder={bosnian ? "Naslov" : "Subject"}
+                                    name="user_subject"
+                                />
+                                <input
+                                    style={{
+                                        backgroundColor: darkMode ? "#333" : "white",
+                                        color: darkMode ? "white" : "black"
+                                    }}
+                                    type="text"
+                                    placeholder={bosnian ? "Vaša Email Adresa" : "Your Email Address"}
+                                    name="user_email"
+                                />
+                                <textarea
+                                    style={{
+                                        backgroundColor: darkMode ? "#333" : "white",
+                                        color: darkMode ? "white" : "black"
+                                    }}
+                                    rows="5"
+                                    placeholder={bosnian ? "Poruka" : "Message"}
+                                    name="message"
+                                />
+                                <button>
+                                    {startSending
+                                        ? (bosnian ? "Šaljem..." : "Sending...")
+                                        : (bosnian ? "Pošalji" : "Submit")
+                                    }
+                                </button>
+                                {done && (
+                                    (bosnian
+                                        ? (<div className="doneText">
+                                            <b>Hvala vam,</b> pisat ću nazad ubrzo!
+                                        </div>)
+                                        : (<div className="doneText">
+                                            <b>Thank you,</b> I'll write back soon!
+                                        </div>)
+                                    )
+                                )}
+                            </form>
+                        </Fade>
                     </div>
                 </div>
             </div>
