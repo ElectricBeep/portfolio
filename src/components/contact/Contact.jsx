@@ -13,8 +13,13 @@ import Fade from "react-reveal/Fade";
 
 const Contact = () => {
     const formRef = useRef();
+    const [name, setName] = useState("");
+    const [subject, setSubject] = useState("");
+    const [email, setEmail] = useState("");
+    const [text, setText] = useState("");
     const [startSending, setStartSending] = useState(false);
     const [done, setDone] = useState(false);
+    const [error, setError] = useState(false);
 
     const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
@@ -36,7 +41,7 @@ const Contact = () => {
                 setStartSending(false);
                 setDone(true);
             }, (error) => {
-                console.log(error.text);
+                setError(true);
             });
     };
 
@@ -45,8 +50,8 @@ const Contact = () => {
             <div id="contact" className="contact">
                 <div className="contactBg"></div>
                 <div className="contactWrapper">
-                    <div className="contactLeft">
-                        <Fade left cascade>
+                    <Fade left cascade>
+                        <div className="contactLeft">
                             {bosnian ? (
                                 <h1 className="contactTitle">Ovako me možete kontaktirati!</h1>
                             ) : (
@@ -77,10 +82,10 @@ const Contact = () => {
                                     <FacebookIcon fontSize="large" className="socialIcon" />
                                 </a>
                             </div>
-                        </Fade>
-                    </div>
-                    <div className="contactRight">
-                        <Fade right cascade>
+                        </div>
+                    </Fade>
+                    <Fade right cascade>
+                        <div className="contactRight">
                             {bosnian ? (
                                 <p className="contactDesc">
                                     <b>Želite me kontaktirati?</b> Ispunite obrazac ispod i odgovorit
@@ -101,6 +106,8 @@ const Contact = () => {
                                     type="text"
                                     placeholder={bosnian ? "Vaše Ime" : "Your Name"}
                                     name="user_name"
+                                    onChange={(e) => setName(e.target.value)}
+                                    value={name}
                                 />
                                 <input
                                     style={{
@@ -110,15 +117,19 @@ const Contact = () => {
                                     type="text"
                                     placeholder={bosnian ? "Naslov" : "Subject"}
                                     name="user_subject"
+                                    onChange={(e) => setSubject(e.target.value)}
+                                    value={subject}
                                 />
                                 <input
                                     style={{
                                         backgroundColor: darkMode ? "#333" : "white",
                                         color: darkMode ? "white" : "black"
                                     }}
-                                    type="text"
+                                    type="email"
                                     placeholder={bosnian ? "Vaša Email Adresa" : "Your Email Address"}
                                     name="user_email"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
                                 />
                                 <textarea
                                     style={{
@@ -128,8 +139,10 @@ const Contact = () => {
                                     rows="5"
                                     placeholder={bosnian ? "Poruka" : "Message"}
                                     name="message"
+                                    onChange={(e) => setText(e.target.value)}
+                                    value={text}
                                 />
-                                <button>
+                                <button disabled={name === "" || subject === "" || email === "" || text === ""}>
                                     {startSending
                                         ? (bosnian ? "Šaljem..." : "Sending...")
                                         : (bosnian ? "Pošalji" : "Submit")
@@ -145,9 +158,19 @@ const Contact = () => {
                                         </div>)
                                     )
                                 )}
+                                {error && (
+                                    (bosnian
+                                        ? (<div className="doneText">
+                                            <b>Slanje neuspješno,</b> pokušajte ponovo!
+                                        </div>)
+                                        : (<div className="doneText">
+                                            <b>Hvala vam,</b> odgovorit ću ubrzo!
+                                        </div>)
+                                    )
+                                )}
                             </form>
-                        </Fade>
-                    </div>
+                        </div>
+                    </Fade>
                 </div>
             </div>
             <div

@@ -92,6 +92,7 @@ textarea:hover {
 
 button {
     z-index: 111;
+    width: 100px;
     border: none;
     padding: 12px;
     border-radius: 5px;
@@ -104,6 +105,11 @@ button {
 
 button:hover {
     background-color: #69bb66;
+}
+
+button:disabled {
+    background-color: #8eb18c;
+    pointer-events: none;
 }
 
 .doneText {
