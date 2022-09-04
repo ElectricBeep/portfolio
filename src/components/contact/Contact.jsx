@@ -180,9 +180,9 @@ const Contact = () => {
                 }}
             >
                 {bosnian ? (
-                    "Dizajnirao Adnan Smajić 2022"
+                    "Dizajnirao i Razvio Adnan Smajić 2022"
                 ) : (
-                    "Designed by Adnan Smajić 2022"
+                    "Designed and Developed by Adnan Smajić 2022"
                 )}
             </div>
         </>
