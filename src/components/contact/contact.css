@@ -125,6 +125,10 @@ button:disabled {
 }
 
 @media screen and (max-width: 480px) {
+    .contact {
+        overflow-x: hidden;
+    }
+
     .contactWrapper {
         flex-direction: column;
         padding: 0px 50px;
