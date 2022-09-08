@@ -1,5 +1,5 @@
 import "./intro.css";
-import Guy from "../../img/selfie.png";
+import Picture from "../../img/newSelfie.png";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import 'animate.css';
 import { useContext } from "react";
@@ -87,7 +87,7 @@ const Intro = () => {
             <div className="introRight">
                 <div className="introBg"></div>
                 <Fade right>
-                    <img src={Guy} alt="" className="introImg" />
+                    <img src={Picture} alt="" className="introImg" />
                 </Fade>
             </div>
         </div >

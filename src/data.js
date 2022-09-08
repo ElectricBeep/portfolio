@@ -1,16 +1,16 @@
-import Netflix from "./img/netflix.png";
-import Videosharing from "./img/videosharing.png";
-import Blog from "./img/blog.png";
-import Booking from "./img/booking.png";
-import Ecommerce from "./img/ecommerce.png";
-import Social from "./img/social.png";
+import Netflix from "./img/netflix.jpg";
+import Videosharing from "./img/videosharing.jpg";
+import Blog from "./img/blog.jpg";
+import Booking from "./img/booking.jpg";
+import Ecommerce from "./img/ecommerce.jpg";
+import Social from "./img/social.jpg";
 
-import Restaurant from "./img/restaurant.png";
-import Admin from "./img/admindashboard.png";
-import Rent from "./img/rentacar.png";
-import RWeb from "./img/reactwebsite.png";
-import Ai from "./img/ai.png";
-import Realestate from "./img/realestate.png";
+import Restaurant from "./img/restaurant.jpg";
+import Admin from "./img/admindashboard.jpg";
+import Rent from "./img/rentacar.jpg";
+import RWeb from "./img/reactwebsite.jpg";
+import Ai from "./img/ai.jpg";
+import Realestate from "./img/realestate.jpg";
 
 export const fullstackProducts = [
     {

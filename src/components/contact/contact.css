@@ -154,8 +154,12 @@ button:disabled {
         flex-wrap: wrap;
     }
 
+    form > :nth-child(3) {
+        width: 100%;
+    }
+
     input {
-        width: 35%;
+        width: 42%;
         height: 40px;
         margin: 10px;
         margin-left: 0;
