@@ -68,7 +68,7 @@ const Contact = () => {
                                 </div>
                                 <div className="contactInfoItem">
                                     <LocationOnIcon fontSize="large" className="contactIcon" />
-                                    Topal Osman-paše Sarajevo 71000
+                                    Bosnia & Herzegovina, 71000 Sarajevo
                                 </div>
                             </div>
                             <div className="contactIconsContainer">

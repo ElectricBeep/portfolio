@@ -29,12 +29,12 @@ const About = () => {
                     </h1>
                     {bosnian ? (
                         <p className="aboutSub">
-                            Moje ime je Adnan Smajić i ja sam samouki, full stack, web developer.
+                            Moje ime je Adnan Smajić i ja sam samouki, full stack web developer.
                         </p>
                     ) : (
                         <p className="aboutSub">
                             My name is Adnan Smajić and I am a self-taught,
-                            full stack, web developer.
+                            full stack web developer.
                         </p>
                     )}
                     {bosnian ? (
