@@ -72,7 +72,7 @@ const Contact = () => {
                                 </div>
                             </div>
                             <div className="contactIconsContainer">
-                                <a className="contactIcon" href="https://www.linkedin.com/in/adnan-smajic-783222223/" target="_blank" rel="noreferrer">
+                                <a className="contactIcon" href="https://www.linkedin.com/in/adnan-smajic-dev/" target="_blank" rel="noreferrer">
                                     <LinkedInIcon fontSize="large" className="socialIcon" />
                                 </a>
                                 <a className="contactIcon" href="https://github.com/ElectricBeep" target="_blank" rel="noreferrer">
